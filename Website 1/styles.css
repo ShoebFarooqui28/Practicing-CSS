@@ -7,4 +7,66 @@
 
 body{
   font-family: "Poppins", serif;
+  background-color: 	#dad7cd;
+}
+
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  background-color: #344e41;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo a{
+  color: #dad7cd;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav__links{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.nav__links li{
+  list-style: none;
+}
+
+.nav__links a{
+  text-decoration: none;
+  color: #dad7cd;
+}
+
+.menu__icon{
+  color: #dad7cd;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+@media (max-width: 768px){
+  .menu__icon{
+    display: block;
+  }
+  .nav__links{
+    position: absolute;
+    top: -20vh;
+    left: 0;
+    width: 100%;
+    background-color: #344e41;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: -1;
+    transition: top 0.4s ease-in-out;
+  }
+  .nav__links.show{
+    top: 100%;
+  }
+
 }
