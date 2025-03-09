@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #dad7cd;
+}
+
+/* Navbar */
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #344e41;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo a {
+  color: #dad7cd;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.nav__links li {
+  list-style: none;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #dad7cd;
+}
+
+.menu__icon {
+  color: #dad7cd;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu__icon {
+    display: block;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: -20vh;
+    left: 0;
+    width: 100%;
+    background-color: #344e41;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: top 0.4s ease-in-out;
+  }
+
+  .nav__links.show {
+    top: 100%;
+  }
+
+}
+
+/* Hero Section */
+.hero__container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 600px;
+  max-height: 800px;
+  padding: 0 4rem;
+  margin: 2rem;
+}
+
+/* Left Side */
+.left__container {
+  max-width: 50%;
+}
+
+.hero__title {
+  font-size: 3rem;
+  color: #344e41;
+}
+
+.hero__slogan {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.hero__btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #344e41;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.hero__btn:hover {
+  background-color: #23352c;
+}
+
+/* Right Side */
+.right__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  transform: scale(1.2);
+  object-fit: contain;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero__container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .left__container {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__img {
+    max-width: 300px;
+  }
+}
