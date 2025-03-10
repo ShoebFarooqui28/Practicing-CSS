@@ -12,6 +12,10 @@ body {
   color: #333;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Navbar */
 .navbar__container {
   display: flex;
@@ -54,7 +58,7 @@ body {
   gap: 2rem;
   padding: 4rem 2rem;
   background-color: #dad7cd;
-  min-height: 100vh;
+  min-height: calc(100vh - 68px);
 }
 
 .left__container {
